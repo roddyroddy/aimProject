@@ -8,6 +8,8 @@ import com.vaadin.ui.TextField;
 import com.vaadin.ui.themes.ValoTheme;
 
 public class TodoItemLayout extends HorizontalLayout {
+
+	private static final long serialVersionUID = -1787852325042446118L;
 	private final TextField text;
 	private final CheckBox done;
 	public TodoItemLayout(Todo todo) {

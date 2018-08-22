@@ -1,49 +1,33 @@
 package com.rodrigobaluyot.project.vaadin;
 
+import java.util.Iterator;
 import java.util.List;
 
 import javax.annotation.PostConstruct;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
+import com.vaadin.server.VaadinSession;
 import com.vaadin.spring.annotation.SpringComponent;
+import com.vaadin.spring.annotation.ViewScope;
 import com.vaadin.ui.VerticalLayout;
 
-@SpringComponent
+//@SpringComponent
 public class TodoLayout extends VerticalLayout{
 	
-		@Autowired
-		TodoRepository repo;
-		
-		@PostConstruct
-		void init() {
-			update();
-		}
-		
-		private void update() {
-			setTodos(repo.findAll());
 
-		}
-
-		private void setTodos(List<Todo> todos) {
-			removeAllComponents();
-			
-			todos.forEach(todo-> addComponent(new TodoItemLayout(todo)));
-			
-			
-		}
+	private static final long serialVersionUID = -2947239020980507475L;
 
 		public void add(Todo todo) {
-			repo.save(todo);
-			update();
-		}
-
-		public void deleteCompleted() {
-			repo.deleteByDone(true);
-			update();
-
+//			repo.save(todo);
+//			update();
+			
+			getUI().access(() -> addComponent(new TodoItemLayout(todo)));
+			
+			
 			
 		}
+
 		
 		
 }

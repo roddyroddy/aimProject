@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.rodbaluyot.project</groupId>
-	<artifactId>Project</artifactId>
+	<artifactId>aim-project</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 
@@ -34,6 +34,25 @@
 			<groupId>com.vaadin</groupId>
 			<artifactId>vaadin-spring-boot-starter</artifactId>
 		</dependency>
+		
+		<dependency>
+		    <groupId>com.vaadin</groupId>
+		    <artifactId>vaadin-push</artifactId>
+		    <version>${vaadin.version}</version>
+		</dependency>
+
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-websocket</artifactId>
+		    <version>4.3.9.RELEASE</version>
+		 </dependency>
+		 <dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-messaging</artifactId>
+		    <version>4.3.9.RELEASE</version>
+		 </dependency>
+
+
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -56,6 +75,9 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+	
+
+	
 
 	<dependencyManagement>
 		<dependencies>
