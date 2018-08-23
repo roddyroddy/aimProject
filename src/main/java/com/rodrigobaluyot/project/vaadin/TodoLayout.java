@@ -1,15 +1,5 @@
 package com.rodrigobaluyot.project.vaadin;
 
-import java.util.Iterator;
-import java.util.List;
-
-import javax.annotation.PostConstruct;
-
-import org.springframework.beans.factory.annotation.Autowired;
-
-import com.vaadin.server.VaadinSession;
-import com.vaadin.spring.annotation.SpringComponent;
-import com.vaadin.spring.annotation.ViewScope;
 import com.vaadin.ui.VerticalLayout;
 
 //@SpringComponent

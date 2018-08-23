@@ -2,14 +2,11 @@ package com.rodrigobaluyot.project.vaadin;
 
 import java.util.Date;
 
-import org.springframework.beans.factory.annotation.Autowired;
-
 import com.vaadin.annotations.Push;
 import com.vaadin.event.ShortcutAction;
 import com.vaadin.icons.VaadinIcons;
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.spring.annotation.SpringUI;
-import com.vaadin.spring.annotation.ViewScope;
 import com.vaadin.ui.Alignment;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.HorizontalLayout;
@@ -74,7 +71,6 @@ public class AimUI extends UI {
 				}
 			};
 			
-			
 		};
 		
 		thread.start();
@@ -101,6 +97,8 @@ public class AimUI extends UI {
 		add.setClickShortcut(ShortcutAction.KeyCode.ENTER);
 		
 		root.addComponent(formLayout);
+		root.setSizeFull();
+		root.setComponentAlignment(formLayout, Alignment.BOTTOM_CENTER);
 		
 	}
 	
@@ -116,5 +114,24 @@ public class AimUI extends UI {
 //		}));
 //		
 //	}
+
 	
+	
+	
+	
+//	stuff below is all the red*************************
+	
+//	WebSocketClient client = new StandardWebSocketClient();
+//	 
+//	WebSocketStompClient stompClient = new WebSocketStompClient(client);
+//	stompClient.setMessageConverter(new MappingJackson2MessageConverter());
+//	 
+//	StompSessionHandler sessionHandler = new MyStompSessionHandler();
+//	stompClient.connect("/topic/greetings", sessionHandler);
+//	 
+//	new Scanner(System.in).nextLine(); // Don't close immediately.
+//	
+//	
+//	
+//	
 }

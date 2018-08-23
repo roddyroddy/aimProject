@@ -1,31 +1,29 @@
 package com.rodrigobaluyot.project.vaadin;
 
-import com.vaadin.data.Binder;
 import com.vaadin.ui.Alignment;
-import com.vaadin.ui.CheckBox;
 import com.vaadin.ui.HorizontalLayout;
-import com.vaadin.ui.TextField;
+import com.vaadin.ui.Label;
 import com.vaadin.ui.themes.ValoTheme;
 
 public class TodoItemLayout extends HorizontalLayout {
 
 	private static final long serialVersionUID = -1787852325042446118L;
-	private final TextField text;
-	private final CheckBox done;
+	private final Label text;
+//	private final CheckBox done;
 	public TodoItemLayout(Todo todo) {
-		done = new CheckBox(); 
-		text = new TextField();
-		text.addStyleName(ValoTheme.TEXTFIELD_BORDERLESS);
+//		done = new CheckBox(); 
+		text = new Label();
+		text.addStyleName(ValoTheme.LABEL_LARGE);
 		
 		
 		
-		addComponents(done);
+		addComponents(text);
 		addComponentsAndExpand(text);
 		setDefaultComponentAlignment(Alignment.MIDDLE_LEFT);
 		
-		Binder<Todo> binder = new Binder<>(Todo.class);
-		binder.bindInstanceFields(this);
-		binder.setBean(todo);
+//		Binder<Todo> binder = new Binder<>(Todo.class);
+//		binder.bindInstanceFields(this);
+//		binder.setBean(todo);
 	}
 	
 	
